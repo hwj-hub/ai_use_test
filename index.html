@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4d7c0f">
+<title>나의 AI 활용 유형 테스트 · 12문항으로 보는 챗봇 사용 습관 8가지 유형 (무료)</title>
+<meta name="description" content="질문 방식 · 답을 받은 뒤의 반응 · 확인 습관을 묻는 12문항으로 나의 AI 활용 유형을 알려 주는 무료 테스트입니다. 8가지 유형마다 찰떡 · 상극 유형과 바로 써먹는 AI 활용 팁을 함께 보여 주고, 결과 카드를 이미지로 저장하거나 링크로 공유할 수 있습니다. 설치 · 가입 없이, 답은 어디에도 전송되지 않습니다.">
+<meta property="og:title" content="나의 AI 활용 유형 테스트 · 나는 검색 대용 질문러? 꼼꼼 팩트체커?">
+<meta property="og:description" content="12문항이면 끝. 8가지 AI 활용 유형 · 찰떡/상극 유형 · 유형별 활용 팁까지. 설치 · 가입 없이 무료.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hwj-hub.github.io/ai_use_test/">
+<!-- 링크 미리보기 그림: 스크래퍼는 절대 주소만 읽으므로 배포 주소로 적는다. 그림은 make_og.py 가 만든 og-image.png(1200×630) -->
+<meta property="og:image" content="https://hwj-hub.github.io/ai_use_test/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="나의 AI 활용 유형 테스트 — 검색 대용 질문러, 꼼꼼 팩트체커 같은 유형 카드가 겹쳐 있는 그림">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="나의 AI 활용 유형 테스트">
+<meta name="twitter:description" content="12문항 · 8가지 유형 · 찰떡/상극 · 유형별 AI 활용 팁. 설치 · 가입 없이 무료.">
+<meta name="twitter:image" content="https://hwj-hub.github.io/ai_use_test/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  color-scheme:light dark;
+  --bg:#f5f8ee; --card:#fff; --card2:#f4f8ea; --fg:#18200f; --muted:#5a6a45; --line:#dde8c8;
+  --accent:#4d7c0f; --accent2:#84cc16; --afg:#fff;
+  --ok:#0b7f57; --okbg:#e2f4ec;
+  --warn:#b45309; --warnbg:#fdf2e3; --danger:#cf3128; --dangerbg:#fdebe9;
+  --shadow:0 1px 2px rgba(24,32,15,.05),0 8px 24px -14px rgba(24,32,15,.32);
+  --r:16px;
+}
+@media (prefers-color-scheme:dark){
+ :root{
+  --bg:#0e130a; --card:#161d10; --card2:#11170c; --fg:#eef5de; --muted:#a3b387; --line:#2a3720;
+  --accent:#a3e635; --accent2:#d9f99d; --afg:#1a2e05;
+  --ok:#34d399; --okbg:#0b2a21;
+  --warn:#fbbf24; --warnbg:#2b2210; --danger:#ff7b72; --dangerbg:#3a1614;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -16px rgba(0,0,0,.85);
+ }
+}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);line-height:1.55;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",Roboto,sans-serif;
+  word-break:keep-all;overflow-wrap:break-word;
+  -webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1280px;margin:0 auto;padding:0 14px calc(40px + env(safe-area-inset-bottom))}
+button{font:inherit;color:inherit}
+.hide{display:none !important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ══ 광고 슬롯 ══ 자리만 비워 두고 화면 폭에 맞는 크기를 AD 가 채운다(애드핏: 광고 공간은 고정되어야 함) */
+.ad-slot{display:flex;align-items:center;justify-content:center;margin:10px auto;max-width:100%}
+.ad-top{width:320px;height:50px;max-width:100%}
+.ad-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);
+  border-radius:8px;background:var(--card2);color:var(--muted);font-size:11px;letter-spacing:.08em;font-weight:600}
+.ad-lab{display:block;text-align:center;font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--muted);opacity:.7;margin:12px 0 -4px}
+body.no-ad .ad-slot,.ad-none{display:none !important}
+@media (max-width:979px){#ad-side{display:none}}
+@media (min-width:980px){#ad-side{margin:14px auto 0}}
+
+/* ── 앱 안(네이버·카카오 WebView) 안내 띠 ── 이미지 저장(내려받기)이 막히는 경우가 많다 */
+.iabar{display:none;align-items:center;gap:10px;margin:10px 0 0;padding:11px 12px;border-radius:12px;
+  background:var(--warnbg);border:1px solid color-mix(in srgb,var(--warn) 34%,transparent);line-height:1.5}
+body.inapp .iabar{display:flex}
+.iabar .ia-t{flex:1 1 auto;min-width:0;font-size:12.5px;font-weight:700;color:var(--fg)}
+.iabar .ia-t small{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-top:2px}
+.iabar .ia-go{flex:0 0 auto;font:inherit;font-size:12.5px;font-weight:800;color:#fff;border:0;border-radius:999px;
+  padding:9px 14px;min-height:38px;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+@media (prefers-color-scheme:dark){.iabar .ia-go{color:var(--afg)}}
+.iabar .ia-x{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;
+  color:var(--muted);font:inherit;font-size:12px;line-height:1;cursor:pointer}
+
+/* ── 하단 오버형 ── 콘텐츠를 가리지 않도록 본문 아래 여백을 같이 늘린다. 문항을 푸는 동안에는 띄우지 않는다 */
+#anchor{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;align-items:center;justify-content:center;
+  background:var(--card);border-top:1px solid var(--line);box-shadow:0 -8px 22px -14px rgba(0,0,0,.55);
+  padding:8px 4px calc(8px + env(safe-area-inset-bottom));transform:translateY(120%);
+  visibility:hidden;pointer-events:none;transition:transform .22s,visibility 0s linear .22s}
+#anchor.on{transform:none;visibility:visible;pointer-events:auto;transition:transform .22s,visibility 0s}
+#anchor .ad-slot{margin:0}
+#anchor .amk{position:absolute;left:10px;top:-11px;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--muted);
+  background:var(--card);border:1px solid var(--line);border-radius:5px;padding:0 5px;line-height:15px}
+#anchor .axl{position:absolute;right:6px;top:-38px;width:36px;height:36px;border-radius:50%;cursor:pointer;
+  border:1px solid var(--line);background:var(--card);color:var(--muted);font-size:13px;line-height:1;box-shadow:var(--shadow)}
+#anchor .axl::before{content:'';position:absolute;inset:-6px}
+body.anch .wrap{padding-bottom:calc(124px + env(safe-area-inset-bottom))}
+body.anch #toast{bottom:calc(118px + env(safe-area-inset-bottom))}
+@media (min-width:980px){#anchor{display:none}}
+
+/* ── 배치 ── 휴대폰: 테스트 → 결과 → 설명 / PC: 왼쪽 테스트 · 설명, 오른쪽 옆 칸 */
+.layout{display:flex;flex-direction:column}
+.colm{display:contents}
+.l-test{order:1}
+.side{order:2}
+.l-info{order:3}
+@media (min-width:980px){
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:0 16px;align-items:start}
+  .colm{display:block}
+  .side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 2px 2px}
+  .side .card{margin-top:12px}
+}
+
+header{text-align:center;padding:14px 0 2px}
+.logo{display:inline-flex;align-items:center;gap:9px;font-size:22px;font-weight:800;letter-spacing:-.02em;margin:0}
+.logo .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:17px;color:#fff;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:var(--shadow)}
+.tag{font-size:14.5px;font-weight:600;color:var(--muted);margin:7px 0 0;text-wrap:balance}
+.tag b{color:var(--fg)}
+.badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:9px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--okbg);color:var(--ok)}
+.badge.gray{background:var(--card2);color:var(--muted);border:1px solid var(--line)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-top:14px}
+.card h2{font-size:12px;font-weight:800;color:var(--muted);margin:0 0 12px;letter-spacing:.07em;
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.card h2 .n{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:6px;margin-right:6px;
+  background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);letter-spacing:0;font-size:11.5px}
+.card p.tx{font-size:13.5px;color:var(--muted);line-height:1.8;margin:0 0 8px}
+.card p.tx b{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);background:var(--card2);
+  font-size:13.5px;font-weight:800;padding:8px 12px;border-radius:12px;cursor:pointer;min-height:46px;transition:.12s;text-decoration:none;color:var(--fg)}
+.btn:hover{border-color:var(--accent)}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.45;cursor:default;transform:none}
+.btn.pri{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:var(--shadow)}
+@media (prefers-color-scheme:dark){.btn.pri{color:var(--afg)}}
+.btn.sm{min-height:36px;padding:4px 12px;font-size:12.5px;letter-spacing:0}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btns .btn{flex:1 1 140px}
+.small{font-size:12px;font-weight:600;color:var(--muted);line-height:1.65;margin:8px 0 0}
+.small b{color:var(--fg)}
+
+/* ══ 문항 화면 ══ */
+.qcard{padding:14px}
+.intro{text-align:center;padding:18px 6px 8px}
+.intro .big{font-size:56px;line-height:1}
+.intro h3{font-size:clamp(22px,6vw,28px);font-weight:900;letter-spacing:-.03em;margin:12px 0 6px}
+.intro p{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 4px}
+.intro .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0 4px}
+.intro .chips span{font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--card2);border:1px solid var(--line)}
+.startbtn{width:100%;min-height:58px;font-size:17px;margin-top:14px}
+.qtop{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px;font-weight:800;color:var(--muted)}
+.prog{height:8px;border-radius:999px;background:var(--card2);border:1px solid var(--line);overflow:hidden;margin:8px 0 14px}
+.prog i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .25s}
+.qno{font-size:13px;font-weight:900;color:var(--accent);letter-spacing:.04em}
+.qtext{font-size:clamp(19px,5.2vw,23px);font-weight:900;letter-spacing:-.02em;line-height:1.4;margin:4px 0 14px;min-height:2.8em}
+.qemo{font-size:30px;line-height:1;margin-bottom:6px}
+.opts{display:grid;gap:9px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--card2);
+  border-radius:14px;padding:13px 14px;min-height:58px;cursor:pointer;font-size:15px;font-weight:700;line-height:1.45;transition:.12s}
+.opt:hover{border-color:var(--accent)}
+.opt:active{transform:scale(.985)}
+.opt .k{flex:0 0 28px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:900;
+  background:var(--card);border:1px solid var(--line);color:var(--muted)}
+.opt.sel{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--card))}
+.opt.sel .k{background:var(--accent);border-color:var(--accent);color:#fff}
+.qfoot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:12px;font-weight:600;color:var(--muted)}
+
+/* ══ 결과 ══ */
+.res{border-radius:18px;padding:22px 18px 18px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.res .shared{display:inline-block;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;background:rgba(255,255,255,.2);margin-bottom:10px}
+.res .remo{font-size:64px;line-height:1}
+.res .rkick{font-size:13px;font-weight:800;opacity:.9;margin-top:10px;letter-spacing:.02em}
+.res .rname{font-size:clamp(26px,7.4vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.2;margin:4px 0 6px}
+.res .rtag{font-size:15px;font-weight:700;opacity:.95}
+.traits{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px}
+.traits span{font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3)}
+.rdesc{font-size:14.5px;font-weight:600;line-height:1.75;margin:14px 2px 0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.pair a{display:block;text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--card2);border-radius:12px;padding:10px 10px;text-align:center}
+.pair a span{display:block;font-size:11.5px;font-weight:800;color:var(--muted)}
+.pair a b{display:block;font-size:14px;font-weight:800;margin-top:2px}
+.pair a.good span{color:var(--ok)}
+.pair a.bad span{color:var(--danger)}
+.tips{list-style:none;margin:12px 0 0;padding:0}
+.tips li{position:relative;padding:11px 12px 11px 42px;border:1px solid var(--line);border-radius:12px;background:var(--card2);
+  font-size:13.5px;font-weight:600;line-height:1.7;margin-top:8px}
+.tips li::before{content:attr(data-i);position:absolute;left:12px;top:10px;font-size:18px}
+.tips li b{font-weight:800}
+.tiphead{font-size:13px;font-weight:900;margin:16px 0 0;color:var(--accent)}
+.scores{list-style:none;margin:12px 0 0;padding:0}
+.scores li{display:grid;grid-template-columns:22px minmax(0,1.6fr) minmax(0,1fr) 32px;align-items:center;gap:8px;padding:4px 0;font-size:12.5px;font-weight:700}
+.scores .sb{height:10px;border-radius:5px;background:var(--card2);border:1px solid var(--line);overflow:hidden}
+.scores .sb i{display:block;height:100%;border-radius:5px;background:var(--accent)}
+.scores .sv{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.scores li.top{color:var(--accent)}
+.scores .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ── 결과 카드(이미지 저장 · 광고) ── 화면을 덮지 않고 흐름 안에 펼친다 */
+#doneCard{border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+#doneCard .ad-lab{margin-top:16px}
+.dmsg{margin:0 0 10px;font-size:14px;font-weight:700;line-height:1.6}
+.dsteps{margin:0;padding:0 0 0 20px;font-size:13px;font-weight:600;line-height:1.75;color:var(--muted)}
+.dsteps b{color:var(--fg);font-weight:800}
+#doneImg{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:10px 0 0}
+.dimgnote{font-size:11.5px;font-weight:600;color:var(--muted);margin:6px 0 0;text-align:center}
+
+/* ── 8가지 유형 ── */
+.types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (min-width:640px){.types{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.type{display:block;text-decoration:none;color:var(--fg);border:1px solid var(--line);border-radius:14px;padding:12px 10px;text-align:center;background:var(--card2);cursor:pointer}
+.type:hover{border-color:var(--accent)}
+.type .e{font-size:30px;line-height:1}
+.type b{display:block;font-size:13.5px;font-weight:800;margin-top:6px;line-height:1.35}
+.type span{display:block;font-size:11.5px;font-weight:600;color:var(--muted);margin-top:3px;line-height:1.4}
+.type.me{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--card))}
+
+.steps{margin:0;padding:0 0 0 20px;font-size:13.5px;line-height:1.85;color:var(--muted);font-weight:600}
+.steps b{color:var(--fg)}
+.faq{border-top:1px solid var(--line);padding:2px 0}
+.faq:first-of-type{border-top:0}
+.faq summary{cursor:pointer;font-size:14px;font-weight:800;padding:11px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:'Q. ';color:var(--accent)}
+.faq p{margin:0 0 12px;font-size:13.5px;line-height:1.8;color:var(--muted);font-weight:600}
+.faq p b{color:var(--fg)}
+.nbx{border:1px solid var(--line);border-radius:var(--r);background:var(--card2);padding:14px 16px;margin-top:14px}
+.nbx-h{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800}
+.nbx-h .ic{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--warnbg);color:var(--warn);font-size:12px;font-weight:900}
+.nbx ul{margin:8px 0 0;padding:0 0 0 18px;font-size:12.5px;line-height:1.75;color:var(--muted);font-weight:600}
+.nbx ul b{color:var(--fg)}
+.nbx-f{font-size:11.5px;color:var(--muted);margin:8px 0 0;line-height:1.65}
+footer{text-align:center;font-size:12px;color:var(--muted);line-height:1.8;margin-top:22px;font-weight:600}
+footer b{color:var(--fg)}
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;z-index:60;
+  background:var(--fg);color:var(--bg);font-size:13.5px;font-weight:700;padding:11px 16px;border-radius:12px;max-width:calc(100% - 28px);
+  text-align:center;pointer-events:none;transition:.2s;box-shadow:var(--shadow)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ╔══════════════════════════════════════════════════════════════════════╗
+     ║  광고 자리 ① 맨 위 · 320×50 (모바일·PC 같은 크기)                     ║
+     ║  단위 ID 는 스크립트 아래쪽 AD.units 한 곳에서 바꿉니다.               ║
+     ║  ID 가 DAN-XXXX 그대로면 점선 자리만 그리고 광고 요청은 보내지 않습니다 ║
+     ║  모바일 ① 맨 위 ④ 결과 카드 ⑤ 하단 오버형                            ║
+     ║  PC     ① 맨 위 ② 옆 칸 위 ④ 결과 카드                               ║
+     ║  문항 버튼을 연달아 누르는 곳이라 바로 옆·바로 아래에는 광고를 두지 않습니다 ║
+     ╚══════════════════════════════════════════════════════════════════════╝ -->
+<div class="ad-slot ad-top" id="ad-top"></div>
+
+<div class="iabar" id="iabar">
+  <div class="ia-t"><span id="iaMsg">앱 안에서는 결과 이미지 저장이 막힐 수 있어요.</span>
+    <small id="iaSub">테스트와 링크 공유는 여기서도 됩니다. 이미지를 저장하려면 브라우저에서 열어 주세요.</small></div>
+  <button class="ia-go" id="iaGo" type="button">크롬에서 열기</button>
+  <button class="ia-x" id="iaX" type="button" aria-label="안내 닫기">✕</button>
+</div>
+
+<header>
+  <h1 class="logo"><span class="ico">🤖</span><span>나의 AI 활용 유형</span></h1>
+  <p class="tag"><b>12문항</b>이면 끝 — 질문 · 확인 · 활용 습관으로 보는 <b>8가지 유형</b></p>
+  <div class="badges">
+    <span class="badge">🔒 답은 이 기기에서만 계산 · 어디에도 전송 안 함</span>
+    <span class="badge gray">유형별 AI 활용 팁</span>
+    <span class="badge gray">결과 카드 저장 · 링크 공유</span>
+    <span class="badge gray">무료 · 설치 없음</span>
+  </div>
+</header>
+
+<div class="layout">
+<div class="colm">
+
+<section class="l-test card qcard" id="quizCard" aria-labelledby="quizH">
+  <h2><span id="quizH"><span class="n">1</span>AI 활용 테스트 · 12문항</span><span id="qCount">약 1분</span></h2>
+
+  <div class="intro" id="intro">
+    <div class="big">🤖</div>
+    <h3>나는 어떤 AI 활용 유형일까?</h3>
+    <p>평소 모습에 가장 가까운 답을 고르세요.</p>
+    <p>정답은 없어요. 재미로 보는 유형이에요.</p>
+    <div class="chips"><span>⌨️ 질문법</span><span>👀 첫 반응</span><span>🔍 확인</span><span>✍️ 글쓰기</span><span>🎓 공부</span><span>💬 대화</span><span>🗓️ 정리</span></div>
+    <button class="btn pri startbtn" id="btnStart" type="button">테스트 시작하기</button>
+  </div>
+
+  <div class="hide" id="qBox">
+    <div class="qtop"><span class="qno" id="qNo">Q1</span><span id="qLeft">12문항 중 1</span></div>
+    <div class="prog" aria-hidden="true"><i id="progBar"></i></div>
+    <div class="qemo" id="qEmo" aria-hidden="true">⏰</div>
+    <div class="qtext" id="qText" aria-live="polite"></div>
+    <div class="opts" id="opts"></div>
+    <div class="qfoot"><button class="btn sm" id="btnBack" type="button">‹ 이전 문항</button><span>답을 누르면 바로 다음으로</span></div>
+  </div>
+</section>
+
+<div class="l-info">
+  <section class="card" id="typesCard">
+    <h2><span><span class="n">4</span>8가지 AI 활용 유형</span><span>눌러서 보기</span></h2>
+    <div class="types" id="typeGrid"></div>
+  </section>
+
+  <section class="card" id="howCard">
+    <h2><span><span class="n">5</span>하는 법</span></h2>
+    <ol class="steps">
+      <li><b>「테스트 시작하기」</b>를 누르고, 평소 모습에 가장 가까운 답을 고르세요. 누르면 바로 다음 문항으로 넘어가요.</li>
+      <li>12문항을 다 고르면 <b>나의 유형</b>과 설명, <b>찰떡 · 상극 유형</b>, 유형에 맞는 <b>AI 활용 팁</b>이 나와요.</li>
+      <li><b>「결과 카드 저장」</b>은 1080×1350 이미지로, <b>「결과 링크 복사」</b>는 내 결과가 바로 열리는 주소로 공유할 수 있어요.</li>
+      <li>잘못 골랐다면 <b>「이전 문항」</b>으로 돌아가 다시 고르면 돼요.</li>
+    </ol>
+    <p class="small">결과는 문항마다 고른 답이 가리키는 유형의 점수를 더해 <b>가장 높은 유형</b>으로 정해요. 점수가 같으면 고른 답의 조합에 따라 그중 하나로 정해져요(같은 답이면 늘 같은 결과).</p>
+  </section>
+
+  <section class="card" id="faqCard">
+    <h2><span><span class="n">6</span>자주 묻는 질문</span></h2>
+    <details class="faq"><summary>결과가 정확한가요?</summary>
+      <p>12문항으로 습관을 가볍게 묶어 보는 <b>재미용 테스트</b>예요. 성격 검사나 능력 평가가 아니고, 그런 판단에 쓰면 안 됩니다. 특정 AI 서비스를 비교하거나 추천하지도 않아요.</p></details>
+    <details class="faq"><summary>답이 어디로 전송되나요?</summary>
+      <p>아니요. 계산은 이 화면 안에서만 하고 <b>서버로 보내지 않아요.</b> 마지막 결과만 이 브라우저(localStorage)에 남아서 다시 열면 보여 줘요.</p></details>
+    <details class="faq"><summary>친구 결과 링크를 받았어요.</summary>
+      <p>링크로 열면 친구의 유형이 먼저 보여요. 아래 <b>「나도 테스트하기」</b>를 누르면 내 테스트를 처음부터 할 수 있어요.</p></details>
+    <details class="faq"><summary>제가 쓰는 AI 서비스와 팁이 안 맞아요.</summary>
+      <p>팁은 어떤 AI 서비스에나 통하는 <b>일반적인 사용 습관</b>이에요. 서비스마다 기능과 개인정보 설정 위치가 다르니, 쓰는 서비스의 설정 · 안내 화면도 한 번 살펴보세요.</p></details>
+    <details class="faq"><summary>네이버 · 카카오톡 앱에서 이미지가 저장되지 않아요.</summary>
+      <p>앱 안 화면은 파일 내려받기를 막아 두는 경우가 많아요. 결과 카드에 뜬 <b>이미지를 길게 눌러 저장</b>하거나, 위쪽 안내의 단추로 크롬 · 사파리에서 열어 주세요.</p></details>
+  </section>
+
+  <div class="nbx">
+    <div class="nbx-h"><span class="ic">!</span><span>보기 전에 확인하세요</span></div>
+    <ul>
+      <li><b>재미로 보는 유형 테스트예요.</b> 심리 · 성격 검사나 능력 평가가 아니에요.</li>
+      <li>활용 팁은 일반적인 권장 습관이에요. <b>중요한 결정은 AI의 답만으로 하지 말고 공식 자료로 확인하세요.</b></li>
+      <li>답은 서버로 보내지 않고, 마지막 결과만 이 브라우저에 남아요.</li>
+    </ul>
+    <p class="nbx-f">이 도구는 <b>있는 그대로 제공되며</b>, 결과를 믿고 한 결정이나 사용 중 생긴 어떠한 손해에 대해서도 <b>제작자와 운영자는 법적 책임을 지지 않습니다.</b></p>
+  </div>
+</div>
+
+</div>
+
+<aside class="side" id="side">
+  <!-- 광고 자리 ② PC 옆 칸 맨 위 · 320×50 (좁은 화면에서는 숨김) -->
+  <div class="ad-slot" id="ad-side"></div>
+
+  <section class="card" id="resCard" aria-labelledby="resH">
+    <h2><span id="resH"><span class="n">2</span>나의 유형</span><span id="resState">아직 테스트 전</span></h2>
+    <div id="resEmpty" class="small" style="margin:0">12문항을 다 고르면 여기에 유형이 나와요. 아래 8가지 유형을 미리 둘러봐도 좋아요.</div>
+    <div class="hide" id="resBody">
+      <div class="res" id="resBox">
+        <span class="shared hide" id="rShared">친구가 공유한 결과</span>
+        <div class="remo" id="rEmo"></div>
+        <div class="rkick" id="rKick">나의 AI 활용 유형은</div>
+        <div class="rname" id="rName"></div>
+        <div class="rtag" id="rTag"></div>
+        <div class="traits" id="rTraits"></div>
+      </div>
+      <p class="rdesc" id="rDesc"></p>
+      <div class="pair">
+        <a class="good" href="#" id="rGood"><span>💚 찰떡 유형</span><b></b></a>
+        <a class="bad" href="#" id="rBad"><span>⚡ 상극 유형</span><b></b></a>
+      </div>
+      <p class="tiphead">💡 이 유형에게 딱 맞는 활용 팁</p>
+      <ul class="tips" id="rTips"></ul>
+      <p class="small">AI의 답은 틀릴 수 있어요. 중요한 내용은 공식 자료로 한 번 더 확인하세요.</p>
+      <ul class="scores hide" id="rScores" aria-label="유형별 점수"></ul>
+      <div class="btns">
+        <button class="btn pri" id="btnSave" type="button">🖼️ 결과 카드 저장</button>
+        <button class="btn" id="btnCopy" type="button">🔗 결과 링크 복사</button>
+      </div>
+      <div class="btns" style="margin-top:8px">
+        <button class="btn" id="btnRetry" type="button">↺ 다시 하기</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card hide" id="doneCard">
+    <h2><span id="doneTitle">결과 카드를 저장했습니다</span><button class="btn sm" id="doneHide" type="button">닫기</button></h2>
+    <p class="dmsg" id="doneMsg"></p>
+    <ol class="dsteps" id="doneSteps"></ol>
+    <img id="doneImg" class="hide" alt="나의 AI 활용 유형 결과 카드 이미지">
+    <p class="dimgnote hide" id="doneImgNote">휴대폰에서는 이미지를 길게 눌러 사진으로 저장할 수도 있습니다</p>
+    <div id="doneAd"><span class="ad-lab">광고</span><div class="ad-slot" id="ad-done"></div></div>
+  </section>
+</aside>
+</div>
+
+<footer>
+  <b>나의 AI 활용 유형 테스트</b> · 설치 없이 브라우저에서<br>
+  12문항 · 8가지 유형 · 답은 이 기기에서만 계산하고 어디에도 전송하지 않음 · 외부 라이브러리 없음<br>
+  재미로 보는 유형 테스트이며 심리 검사나 능력 평가가 아닙니다.
+</footer>
+</div>
+
+<!-- 광고 자리 ⑤ 하단 오버형 320×50(모바일) — 문항 화면이 보이는 동안에는 내려가 있습니다 -->
+<div id="anchor"><span class="amk">광고</span><div class="ad-slot" id="ad-anchor"></div>
+  <button class="axl" id="anchorX" type="button" aria-label="광고 닫기">✕</button></div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+/* ════════════════════════════════════════════════════════════
+   나의 AI 활용 유형 테스트
+   · 12문항 × 4지선다. 답마다 가리키는 유형에 w 점(기본 1)을 더한다
+   · 가장 점수가 높은 유형이 결과. 같으면 고른 답 조합(해시)으로 그중 하나 — 같은 답이면 늘 같은 결과
+   · ?r=<유형 키> 로 열면 그 유형 결과를 「친구가 공유한 결과」로 먼저 보여 준다
+   ════════════════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+const strip = s => String(s).replace(/<[^>]+>/g, '');
+let toastT = 0;
+function toast(msg, ms){
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), ms || 2800);
+}
+function onScreen(el, m){
+  if (!el || el.classList.contains('hide')) return false;
+  const r = el.getBoundingClientRect(), k = m || 0;
+  return r.height > 0 && r.bottom > k && r.top < window.innerHeight - k;
+}
+const UA = navigator.userAgent || '';
+const IS_IOS = /iPhone|iPad|iPod/i.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const IN_FRAME = window.top !== window.self;
+const SITE = 'https://hwj-hub.github.io/ai_use_test/';
+const LS_KEY = 'ai_use_test.last';
+
+/* ── 유형 ── c1·c2: 결과 카드 색 */
+const TYPES = {
+  search: {e: '🔎', name: '검색 대용 질문러', tag: '궁금하면 일단 물어보는 즉문즉답파', c1: '#2f6f1a', c2: '#5fa82a',
+    traits: ['질문은 짧게', '답은 빠르게', '「그게 뭐였더라?」'],
+    desc: '궁금한 게 생기면 검색창 대신 AI 창부터 여는 사람이에요. 한 줄 질문에 바로 답이 돌아오는 속도가 좋죠. 다만 짧게 물을수록 답도 두루뭉술해지기 쉽고, 바뀌는 정보는 틀릴 수 있어요.',
+    good: 'prompter', bad: 'friend',
+    tips: [['🧭', '가격 · 운영시간 · 최신 소식처럼 <b>자주 바뀌는 정보</b>는 출처와 기준 날짜를 같이 물어보고, 공식 사이트에서 한 번 더 확인하세요.'],
+           ['✍️', '키워드 한 줄 대신 <b>「누가 · 무엇을 · 어떤 형식으로」</b>까지 문장으로 적으면 답이 훨씬 구체적이에요. 예: 「초등 부모 대상, 3줄로, 쉬운 말로 설명해 줘」']]},
+  paste: {e: '📋', name: '시키는 대로 복붙러', tag: '받은 답을 바로 쓰는 실행력 만렙', c1: '#0b7285', c2: '#22a6bd',
+    traits: ['Ctrl+C, Ctrl+V', '결정이 빠름', '시간 절약 중시'],
+    desc: '답을 받으면 고민하지 않고 바로 써먹는 실행력의 소유자예요. 해야 할 일이 눈 깜짝할 새 끝나죠. 다만 AI도 그럴듯하게 틀릴 수 있어서, 붙여 넣기 전 마지막 점검이 한 번 더 있으면 더 든든해요.',
+    good: 'fact', bad: 'prompter',
+    tips: [['🔍', '붙여 넣기 전에 <b>숫자 · 이름 · 날짜 · 인용문</b>만큼은 직접 확인하세요. 그럴듯하게 틀린 내용(환각)이 가장 자주 섞이는 부분이에요.'],
+           ['🔒', '복붙은 오고 가는 길이에요. 내 글이나 자료를 넣을 때도 <b>이름 · 연락처 · 계좌번호 · 회사 내부 자료</b>는 지우고 넣는 습관을 들이세요.']]},
+  fact: {e: '🧐', name: '꼼꼼 팩트체커', tag: '말하는 근거를 꼭 확인하는 신중파', c1: '#862e9c', c2: '#b25bd0',
+    traits: ['「출처가 어디야?」', '두 번 확인', '쉽게 안 믿음'],
+    desc: 'AI의 답을 한 번 더 따져 보는 신중한 사용자예요. 틀린 내용에 속을 확률이 가장 낮은 유형이죠. 다만 확인에 시간을 너무 쓰면 지칠 수 있으니, 중요한 것부터 골라서 확인해 보세요.',
+    good: 'draft', bad: 'helper',
+    tips: [['📎', '<b>「근거와 출처를 함께 알려 줘」</b>라고 요청한 뒤, 링크가 실제로 열리는지 · 내용이 맞는지 직접 확인하세요. 출처 이름 자체를 지어내는 경우도 있어요.'],
+           ['🔄', '같은 질문을 <b>표현을 바꿔 한 번 더</b> 물어서 답이 일관되는지 보는 것도 좋은 점검법이에요. 중요한 내용은 공식 자료를 최종 기준으로 삼으세요.']]},
+  friend: {e: '💬', name: '대화 친구형', tag: '수다도 고민도 털어놓는 말동무파', c1: '#d6336c', c2: '#f06595',
+    traits: ['말 걸기부터', '대화가 길어짐', '반응 좋으면 신남'],
+    desc: 'AI를 도구보다 대화 상대로 편하게 쓰는 사람이에요. 생각을 정리하거나 아이디어를 굴릴 때 말동무가 있다는 건 꽤 큰 힘이죠. 다만 친해질수록 개인 얘기를 많이 하게 되니 선은 지켜 두세요.',
+    good: 'learner', bad: 'search',
+    tips: [['🔒', '실명 · 주소 · 연락처 · 건강 · 금융 정보 같은 <b>민감한 내용은 적지 않는 습관</b>을 들이세요. 대화 기록이 저장되는지, 학습에 쓰이는지는 서비스 설정에서 확인할 수 있어요.'],
+           ['🤝', 'AI는 공감하는 말투를 잘 만들지만 사람은 아니에요. <b>중요한 고민</b>은 가까운 사람이나 전문가와도 나눠 보세요.']]},
+  draft: {e: '✍️', name: '초안 장인', tag: '뼈대는 AI, 마무리는 내가 하는 편집파', c1: '#e8590c', c2: '#ff922b',
+    traits: ['빈 화면이 두려움', '받은 글을 고쳐 씀', '내 말투가 중요'],
+    desc: '빈 문서 앞에서 AI에게 뼈대를 받고, 내 말투로 다듬어 완성하는 사람이에요. 시작이 가장 어려운 일을 가볍게 만드는 좋은 방식이죠. 마지막 손질까지 직접 하니 결과물에도 내 색이 남아요.',
+    good: 'helper', bad: 'learner',
+    tips: [['🧩', '초안을 부탁할 때 <b>목적 · 읽는 사람 · 분량 · 말투</b>를 먼저 알려 주세요. 예: 「팀장님께 보고하는 5줄 메일, 정중하게」']  ,
+           ['✅', '마지막은 사람 몫이에요. <b>사실 관계와 우리 상황에 맞는지</b> 직접 읽고 고친 뒤에 쓰세요. 회사 기밀이나 개인정보는 초안 요청에 넣지 마세요.']]},
+  prompter: {e: '🧪', name: '프롬프트 연구가', tag: '질문을 갈고닦는 실험실형', c1: '#1864ab', c2: '#4c9aff',
+    traits: ['조건을 길게', '고쳐 가며 재시도', '잘 되는 문장 저장'],
+    desc: '같은 AI도 어떻게 묻느냐에 따라 결과가 달라진다는 걸 아는 사람이에요. 질문을 고쳐 가며 최고의 답을 끌어내는 과정 자체를 즐기죠. 가끔은 완벽한 문장보다 일단 해 보는 쪽이 더 빠를 때도 있어요.',
+    good: 'search', bad: 'paste',
+    tips: [['🧱', '프롬프트를 <b>「역할 · 배경 · 할 일 · 형식」</b> 네 칸으로 나눠 쓰면 다시 쓰기 쉬워요. 잘 먹힌 문장은 메모해 두세요.'],
+           ['🎯', '한 번에 길게 시키기보다 <b>단계로 나눠</b> 결과를 보며 고쳐 가세요. 원하는 결과의 <b>예시를 한두 개</b> 보여 주면 형식이 훨씬 비슷해져요.']]},
+  helper: {e: '🗓️', name: '일상 비서형', tag: '정리 · 요약 · 계획을 맡기는 효율파', c1: '#087f5b', c2: '#38b48a',
+    traits: ['요약 · 번역 · 표 정리', '할 일 목록 담당', '쓰고 나면 바로 닫음'],
+    desc: '정리와 요약, 일정 짜기 같은 번거로운 일을 척척 맡기는 사람이에요. 해야 할 일이 줄어드는 만큼 여유가 생기죠. 다만 맡긴 일의 결과에는 틀린 숫자나 날짜가 섞이지 않았는지 눈길 한 번만 주세요.',
+    good: 'draft', bad: 'fact',
+    tips: [['🗓️', '자주 하는 작업은 <b>「항상 이 형식으로 정리해 줘」</b>를 문장으로 저장해 두세요. 요약 · 일정 · 장보기 목록 같은 반복 작업이 훨씬 편해져요.'],
+           ['🧮', '<b>계산 · 날짜 · 금액</b>은 틀릴 수 있어요. 중요한 건 계산기나 달력으로 다시 확인하고, 개인 일정 · 주소는 필요한 만큼만 넣으세요.']]},
+  learner: {e: '🎓', name: '호기심 과외생', tag: '「왜?」를 끝까지 파고드는 탐구파', c1: '#5f3dc4', c2: '#8f73e8',
+    traits: ['「왜 그런데?」', '쉬운 설명 요청', '꼬리에 꼬리 질문'],
+    desc: 'AI를 24시간 대기 중인 선생님처럼 쓰는 사람이에요. 모르는 개념도 눈높이에 맞춰 풀어 달라고 하면 되니 배움이 한결 가벼워지죠. 이해한 내용을 다른 자료로 한 번 더 굳히면 더욱 좋아요.',
+    good: 'friend', bad: 'draft',
+    tips: [['🎓', '<b>「중학생도 이해하게」「예시 3개」</b>처럼 수준과 방식을 알려 주세요. 배운 걸 내 말로 설명해 보고 맞는지 점검받는 것도 좋은 공부법이에요.'],
+           ['📚', '공부한 내용은 <b>교재 · 논문 · 공식 문서</b>와 교차 확인하세요. 최신 규정이나 의학 · 법률 정보는 AI의 답만으로 결정하지 마세요.']]}
+};
+const ORDER = ['search', 'paste', 'fact', 'friend', 'draft', 'prompter', 'helper', 'learner'];
+
+/* ── 문항 ── a: [보기, 유형, 점수(기본 1)] */
+const QS = [
+  {e: '💡', q: 'AI에게 가장 먼저 말을 거는 때는?', a: [
+    ['써야 할 글 앞에서 막막할 때', 'draft'],
+    ['궁금한 게 생긴 바로 그 순간', 'search'],
+    ['심심하거나 이야기 상대가 필요할 때', 'friend'],
+    ['오늘 할 일을 정리하고 싶을 때', 'helper']]},
+  {e: '⌨️', q: '질문을 입력할 때 내 스타일은?', a: [
+    ['배경 · 조건 · 형식까지 길게 적는다', 'prompter'],
+    ['키워드 몇 개만 툭 던진다', 'search'],
+    ['「왜 그런지」를 꼭 붙여서 묻는다', 'learner'],
+    ['친구에게 말하듯 편하게 쓴다', 'friend']]},
+  {e: '👀', q: 'AI가 답을 줬어요. 내 첫 반응은?', a: [
+    ['좋아, 그대로 가져다 쓴다', 'paste'],
+    ['이해 안 되는 부분을 다시 묻는다', 'learner'],
+    ['정말 맞나? 다른 곳에서 확인해 본다', 'fact'],
+    ['뼈대로 삼고 내 말투로 고쳐 쓴다', 'draft']]},
+  {e: '🤔', q: '답이 틀린 것 같을 때 나는?', a: [
+    ['검색으로 확인해 보고 넘어간다', 'search'],
+    ['근거나 출처를 대 보라고 한다', 'fact'],
+    ['질문을 고쳐서 다시 물어본다', 'prompter'],
+    ['「다시 생성」을 눌러 다른 답을 본다', 'paste']]},
+  {e: '📚', q: '업무나 학교 과제에 AI를 쓴다면?', a: [
+    ['모르는 개념부터 설명해 달라고 한다', 'learner'],
+    ['나온 결과를 거의 그대로 정리해 쓴다', 'paste'],
+    ['요약 · 표 · 메일 정리를 맡긴다', 'helper'],
+    ['초안이나 개요부터 받아 시작한다', 'draft']]},
+  {e: '🆕', q: '새로운 AI 기능이 나왔다는 소식을 들으면?', a: [
+    ['개인정보를 어떻게 다루는지부터 본다', 'fact'],
+    ['일단 써 보면서 이것저것 실험한다', 'prompter'],
+    ['내 일상 업무에 쓸 수 있을지 살펴본다', 'helper'],
+    ['필요해지면 그때 써 본다', 'search']]},
+  {e: '⏳', q: '한 번 대화를 시작하면 보통?', a: [
+    ['한 번 묻고 답 받으면 끝', 'search'],
+    ['답이 맞는지 따져 보느라 되묻는다', 'fact'],
+    ['주제가 이어져 한참 수다를 떤다', 'friend'],
+    ['결과를 보며 몇 번씩 질문을 다듬는다', 'prompter']]},
+  {e: '🧳', q: '여행 계획을 AI에게 부탁한다면?', a: [
+    ['일정표 전체를 짜 달라고 한다', 'helper'],
+    ['나온 일정대로 바로 예약을 시작한다', 'paste'],
+    ['「맛집 3곳만」처럼 딱 필요한 것만 묻는다', 'search'],
+    ['그 지역의 역사 · 문화를 먼저 물어본다', 'learner']]},
+  {e: '🧰', q: 'AI에게 가장 자주 시키는 일은?', a: [
+    ['개념이나 원리를 풀어서 설명해 달라고', 'learner'],
+    ['계산 · 날짜 · 사실을 확인해 달라고', 'fact'],
+    ['요약 · 번역 · 정리', 'helper'],
+    ['글 다듬기 · 문장 만들기', 'draft']]},
+  {e: '🎙️', q: 'AI를 쓰는 방식 중 가장 가까운 건?', a: [
+    ['글로 정확하게 조건을 적는다', 'prompter'],
+    ['받은 답을 복사해 바로 메신저나 문서에 붙인다', 'paste'],
+    ['말로 이야기하듯 대화한다', 'friend'],
+    ['문서나 사진을 올려서 정리를 맡긴다', 'helper']]},
+  {e: '📣', q: 'AI에게 받은 내용을 다른 사람에게 알릴 땐?', a: [
+    ['재미있었던 대화를 캡처해서 공유한다', 'friend'],
+    ['「AI가 이렇게 말했는데 확인해 봤어」라고 말한다', 'fact'],
+    ['받은 내용을 정리해 그대로 전달한다', 'paste'],
+    ['내 말투로 다시 써서 전달한다', 'draft']]},
+  {e: '🤝', q: 'AI는 나에게 어떤 존재인가요?', a: [
+    ['공동 집필 파트너', 'draft'],
+    ['24시간 대기 중인 선생님', 'learner'],
+    ['만지작거릴수록 재밌는 실험실', 'prompter'],
+    ['말 잘 통하는 친구', 'friend']]}
+];
+
+const S = {i: 0, ans: [], shared: false, type: null, scores: null};
+
+/* ── 문항 그리기 ── */
+function showQ(){
+  const q = QS[S.i];
+  $('intro').classList.add('hide');
+  $('qBox').classList.remove('hide');
+  $('qNo').textContent = 'Q' + (S.i + 1);
+  $('qLeft').textContent = QS.length + '문항 중 ' + (S.i + 1);
+  $('progBar').style.width = (S.i / QS.length * 100) + '%';
+  $('qEmo').textContent = q.e;
+  $('qText').textContent = q.q;
+  $('opts').innerHTML = q.a.map((a, k) =>
+    '<button class="opt' + (S.ans[S.i] === k ? ' sel' : '') + '" type="button" data-k="' + k + '"><span class="k">' + 'ABCD'[k] + '</span><span>' + esc(a[0]) + '</span></button>').join('');
+  $('btnBack').disabled = S.i === 0;
+}
+function pick(k){
+  if (S.lock) return;
+  S.lock = true;
+  S.ans[S.i] = k;
+  [...$('opts').children].forEach((b, j) => b.classList.toggle('sel', j === k));
+  setTimeout(() => {
+    S.lock = false;
+    if (S.i < QS.length - 1) { S.i++; showQ(); }
+    else finish();
+  }, 220);
+}
+function score(ans){
+  const sc = {};
+  ORDER.forEach(t => { sc[t] = 0; });
+  ans.forEach((k, i) => { const a = QS[i].a[k]; if (a) sc[a[1]] += a[2] || 1; });
+  /* 같은 점수면 고른 답 조합으로 그중 하나를 정한다 — 같은 답이면 늘 같은 결과, 특정 유형으로 쏠리지 않게 */
+  const mx = Math.max.apply(null, ORDER.map(t => sc[t]));
+  const tied = ORDER.filter(t => sc[t] === mx);
+  const h = ans.reduce((s, k, i) => (s * 31 + (k + 1) * (i + 7)) % 9973, 17);
+  return {best: tied[h % tied.length], sc};
+}
+function finish(){
+  $('progBar').style.width = '100%';
+  const r = score(S.ans);
+  try { localStorage.setItem(LS_KEY, JSON.stringify({t: r.best, sc: r.sc, d: Date.now()})); } catch (e) { /* 무시 */ }
+  history.replaceState(null, '', location.pathname + '?r=' + r.best);
+  showResult(r.best, r.sc, false, true);
+  resetIntro('다시 하기');
+}
+function resetIntro(label){
+  $('qBox').classList.add('hide');
+  $('intro').classList.remove('hide');
+  $('btnStart').textContent = label || '테스트 시작하기';
+}
+
+/* ── 결과 ── */
+function showResult(key, sc, shared, scroll){
+  const t = TYPES[key];
+  if (!t) return;
+  S.type = key; S.scores = sc; S.shared = shared;
+  $('resEmpty').classList.add('hide');
+  $('resBody').classList.remove('hide');
+  $('resState').textContent = shared ? '공유받은 결과' : '12문항 완료';
+  $('rShared').classList.toggle('hide', !shared);
+  $('rKick').textContent = shared ? '친구의 AI 활용 유형은' : '나의 AI 활용 유형은';
+  $('resBox').style.background = 'linear-gradient(140deg,' + t.c1 + ',' + t.c2 + ')';
+  $('rEmo').textContent = t.e;
+  $('rName').textContent = t.name;
+  $('rTag').textContent = t.tag;
+  $('rTraits').innerHTML = t.traits.map(x => '<span>' + esc(x) + '</span>').join('');
+  $('rDesc').textContent = t.desc;
+  const g = TYPES[t.good], b = TYPES[t.bad];
+  $('rGood').dataset.t = t.good; $('rGood').querySelector('b').textContent = g.e + ' ' + g.name;
+  $('rBad').dataset.t = t.bad; $('rBad').querySelector('b').textContent = b.e + ' ' + b.name;
+  $('rTips').innerHTML = t.tips.map(x => '<li data-i="' + x[0] + '">' + x[1] + '</li>').join('');
+  const sb = $('rScores');
+  if (sc) {
+    const mx = Math.max.apply(null, ORDER.map(k => sc[k])) || 1;
+    sb.innerHTML = ORDER.slice().sort((a, c) => sc[c] - sc[a]).map(k =>
+      '<li class="' + (k === key ? 'top' : '') + '"><span>' + TYPES[k].e + '</span><span class="nm">' + esc(TYPES[k].name) +
+      '</span><span class="sb"><i style="width:' + Math.round(sc[k] / mx * 100) + '%"></i></span><span class="sv">' + sc[k] + '점</span></li>').join('');
+    sb.classList.remove('hide');
+  } else sb.classList.add('hide');
+  $('btnRetry').textContent = shared ? '▶ 나도 테스트하기' : '↺ 다시 하기';
+  [...$('typeGrid').children].forEach(el => el.classList.toggle('me', el.dataset.t === key));
+  AD.hideDone();
+  if (scroll) setTimeout(() => {
+    const card = $('resCard');
+    if (AD.pc) $('side').scrollTo({top: Math.max(0, card.offsetTop - 12), behavior: 'smooth'});
+    else card.scrollIntoView({behavior: 'smooth', block: 'start'});
+    updateAnchor();
+  }, 120);
+}
+function renderTypes(){
+  $('typeGrid').innerHTML = ORDER.map(k => { const t = TYPES[k];
+    return '<a class="type" href="?r=' + k + '" data-t="' + k + '"><div class="e">' + t.e + '</div><b>' + esc(t.name) + '</b><span>' + esc(t.tag) + '</span></a>'; }).join('');
+}
+function peek(key){
+  /* 유형 둘러보기 — 내 결과는 그대로 두고 그 유형만 보여 준다 */
+  showResult(key, null, false, true);
+  $('rKick').textContent = '유형 둘러보기';
+  $('resState').textContent = '둘러보는 중';
+}
+
+/* ── 결과 카드 이미지 (1080×1350) ── */
+function wrapLines(ctx, text, maxW){
+  const out = []; let line = '';
+  for (const ch of text) {
+    const t = line + ch;
+    if (ctx.measureText(t).width > maxW && line) { out.push(line); line = ch.trim() ? ch : ''; }
+    else line = t;
+  }
+  if (line) out.push(line);
+  return out;
+}
+function rr(ctx, x, y, w, h, r){
+  ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+function drawCard(){
+  const t = TYPES[S.type], W = 1080, H = 1350;
+  const c = document.createElement('canvas'); c.width = W; c.height = H;
+  const x = c.getContext('2d');
+  const FF = '"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif';
+  const g = x.createLinearGradient(0, 0, W, H); g.addColorStop(0, t.c1); g.addColorStop(1, t.c2);
+  x.fillStyle = g; x.fillRect(0, 0, W, H);
+  x.fillStyle = 'rgba(255,255,255,.12)'; x.beginPath(); x.arc(940, 160, 260, 0, 7); x.fill();
+  x.beginPath(); x.arc(120, 1220, 220, 0, 7); x.fill();
+  x.textAlign = 'center'; x.fillStyle = '#fff';
+  x.font = '800 40px ' + FF; x.globalAlpha = .9;
+  x.fillText(S.shared ? '친구의 AI 활용 유형' : '나의 AI 활용 유형', W / 2, 140); x.globalAlpha = 1;
+  x.font = '200px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
+  x.fillText(t.e, W / 2, 380);
+  x.font = '900 86px ' + FF;
+  const nl = wrapLines(x, t.name, W - 140);
+  nl.forEach((l, i) => x.fillText(l, W / 2, 520 + i * 100));
+  let y = 520 + (nl.length - 1) * 100 + 80;
+  x.font = '700 42px ' + FF; x.globalAlpha = .95; x.fillText(t.tag, W / 2, y); x.globalAlpha = 1;
+  y += 70;
+  x.font = '800 34px ' + FF;
+  const chips = t.traits.map(s => ({s, w: x.measureText(s).width + 56}));
+  let rows = [[]], rw = [0];
+  chips.forEach(ch => { const r = rows.length - 1; if (rw[r] + ch.w > W - 120 && rows[r].length) { rows.push([]); rw.push(0); }
+    rows[rows.length - 1].push(ch); rw[rw.length - 1] += ch.w + 16; });
+  rows.forEach((r, i) => { let cx = (W - (rw[i] - 16)) / 2; r.forEach(ch => {
+    x.fillStyle = 'rgba(255,255,255,.2)'; rr(x, cx, y + i * 80, ch.w, 64, 32); x.fill();
+    x.fillStyle = '#fff'; x.fillText(ch.s, cx + ch.w / 2, y + i * 80 + 44); cx += ch.w + 16; }); });
+  y += rows.length * 80 + 30;
+  /* 아래 흰 칸 — 찰떡 · 상극 */
+  const bx = 80, bw = W - 160, bh = 230;
+  const by = Math.max(y, H - 140 - bh);
+  x.fillStyle = 'rgba(255,255,255,.95)'; rr(x, bx, by, bw, bh, 36); x.fill();
+  const g2 = TYPES[t.good], b2 = TYPES[t.bad];
+  [[g2, '💚 찰떡', '#0b7f57', bx + bw / 4], [b2, '⚡ 상극', '#cf3128', bx + bw * 3 / 4]].forEach(([tt, lab, col, cx]) => {
+    x.fillStyle = col; x.font = '800 34px ' + FF; x.fillText(lab, cx, by + 62);
+    x.font = '70px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif'; x.fillStyle = '#000'; x.fillText(tt.e, cx, by + 145);
+    x.fillStyle = '#10221f'; x.font = '800 32px ' + FF;
+    const ls = wrapLines(x, tt.name, bw / 2 - 40); x.fillText(ls[0] + (ls.length > 1 ? '…' : ''), cx, by + 200);
+  });
+  x.strokeStyle = 'rgba(24,32,15,.12)'; x.lineWidth = 3; x.beginPath(); x.moveTo(W / 2, by + 36); x.lineTo(W / 2, by + bh - 36); x.stroke();
+  x.fillStyle = '#fff'; x.font = '700 30px ' + FF; x.globalAlpha = .9;
+  x.fillText('hwj-hub.github.io/ai_use_test · 재미로 보는 테스트', W / 2, H - 60); x.globalAlpha = 1;
+  return c;
+}
+function download(blob, name){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+function saveCard(){
+  if (!S.type) return;
+  const c = drawCard(), t = TYPES[S.type];
+  const name = 'AI활용유형_' + t.name.replace(/[^가-힣A-Za-z0-9]+/g, '') + '.png';
+  c.toBlob(b => {
+    if (!b) { toast('이미지를 만들지 못했어요'); return; }
+    download(b, name);
+    toast(IA.on ? '저장을 시도했어요. 안 되면 아래 이미지를 길게 눌러 저장하세요.' : '결과 카드를 저장했어요');
+    AD.done('결과 카드를 저장했습니다', t.e + ' ' + t.name + ' 카드예요 (1080×1350).',
+      ['인스타 스토리 · 단톡방에 올리기 좋은 세로 비율이에요.',
+       '친구에게는 <b>「결과 링크 복사」</b>로 보내면 내 유형이 바로 열려요.'], c.toDataURL('image/png'));
+  }, 'image/png');
+}
+function shareUrl(){ return SITE + '?r=' + S.type; }
+function copyLink(){
+  if (!S.type) return;
+  const t = TYPES[S.type];
+  copyText(shareUrl(), () => toast('결과 링크를 복사했어요 — ' + t.name));
+}
+
+/* ── 앱 안(WebView) ────────────────────────────────────── */
+const IA = {
+  naver: /NAVER\(inapp/i.test(UA),
+  kakao: /KAKAOTALK/i.test(UA),
+  line: /\bLine\//i.test(UA),
+  ios: IS_IOS,
+  android: /Android/i.test(UA)
+};
+IA.on = IA.naver || IA.kakao || IA.line ||
+  /Instagram|FBAN|FBAV|FB_IAB|DaumApps|everytimeApp|band\/|KAKAOSTORY/i.test(UA) ||
+  (IA.android && /;\s*wv\)/i.test(UA));
+IA.chrome = IA.android && !IA.kakao && !IA.line;
+IA.copyOnly = IA.ios && !IA.kakao && !IA.line;
+IA.app = IA.naver ? (/NAVER\(inapp;\s*blog/i.test(UA) ? '네이버 블로그 앱' : '네이버 앱') : IA.kakao ? '카카오톡' : IA.line ? '라인' : '앱';
+IA.label = IA.copyOnly ? '주소 복사' : IA.chrome ? '크롬에서 열기' : '다른 브라우저로 열기';
+function externalUrl(){
+  const url = location.href;
+  if (IA.kakao) return 'kakaotalk://web/openExternal?url=' + encodeURIComponent(url);
+  if (IA.line) return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'openExternalBrowser=1';
+  if (IA.android) return 'intent://' + url.replace(/^https?:\/\//i, '') +
+    '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' + encodeURIComponent(url) + ';end';
+  return '';
+}
+function copyText(text, done){
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done)); return; }
+  } catch (e) { /* 아래로 */ }
+  fallbackCopy(text, done);
+}
+function fallbackCopy(text, done){
+  const t = document.createElement('textarea');
+  t.value = text; t.setAttribute('readonly', ''); t.style.cssText = 'position:fixed;left:-9999px;top:0';
+  document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length);
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { /* 무시 */ }
+  t.remove();
+  if (ok) done(); else toast('복사하지 못했어요. 주소창의 주소를 직접 복사해 주세요.');
+}
+function goOut(){
+  const u = externalUrl();
+  if (u) { location.href = u; return; }
+  copyText(location.href, () => toast('주소를 복사했습니다. 사파리를 열고 붙여 넣거나, 화면의 메뉴에서 「다른 브라우저로 열기」를 누르세요.', 4200));
+}
+function initInApp(){
+  if (!IA.on) return;
+  let hidden = false;
+  try { hidden = sessionStorage.getItem('ai_use_test.iahide') === '1'; } catch (e) { /* 무시 */ }
+  if (!hidden) document.body.classList.add('inapp');
+  $('iaMsg').textContent = IA.app + ' 안에서는 결과 이미지 저장이 막힐 수 있어요.';
+  $('iaSub').textContent = '테스트와 링크 공유는 여기서도 됩니다. 이미지를 저장하려면 ' + (IA.copyOnly ? '주소를 복사해 사파리에서' : '브라우저에서') + ' 열어 주세요.';
+  $('iaGo').textContent = IA.label;
+}
+
+/* ════════════════════════════════════════════════════════════
+   광고 (카카오 애드핏) — 반응속도 테스트의 AD 객체를 그대로 옮기고 「핵심 행동 중」 조건만 바꿈
+     · 문항 화면이 보이는 동안에는 오버형을 내려 둔다(연달아 누르는 손가락 밑으로 광고가 들어오면 오클릭)
+   ※ 단위 ID 는 애드핏에서 크기별로 따로 발급받아 아래 units 에만 적으면 된다. DAN-XXXX 그대로면 광고를 부르지 않는다.
+   ════════════════════════════════════════════════════════════ */
+const AD = {
+  units: {
+    top:     { id: 'DAN-0K9XdZzwT5GNrWVI', w: 320, h: 50 },
+    side_pc: { id: 'DAN-Wv27m4hQwHRpyFVv', w: 320, h: 50 },
+    done:    { id: 'DAN-muYKp0WoJWyJkc3L', w: 300, h: 250 },
+    anchor:  { id: 'DAN-9rl3jLlVV1sUhaTA', w: 320, h: 50 }
+  },
+  iframeOk: true,
+  popup: true,
+  overlay: true,
+  init(){
+    this.off = IN_FRAME && !this.iframeOk;
+    this.pc = window.matchMedia('(min-width:980px)').matches;
+    if (this.off) { document.body.classList.add('no-ad'); return; }
+    this.put($('ad-top'), 'top');
+    if (this.pc) this.put($('ad-side'), 'side_pc');
+    this.load();
+  },
+  put(box, key, preload){
+    const u = this.units[key];
+    if (!box || !u || box.dataset.ad) return;
+    if (document.querySelectorAll('ins.kakao_ad_area').length >= 4) return;
+    box.dataset.ad = key;
+    box.style.width = u.w + 'px';
+    if (/XXXX/.test(u.id)) { box.style.height = u.h + 'px'; box.innerHTML = '<div class="ad-ph">광고 ' + u.w + ' × ' + u.h + '</div>'; return; }
+    box.style.minHeight = u.h + 'px';
+    const fail = 'adNone_' + box.id.replace(/-/g, '_');
+    window[fail] = () => {
+      box.classList.add('ad-none');
+      if (key === 'anchor') { this.closed = true; this.sync(true); }
+      if (key === 'done' && $('doneAd')) $('doneAd').classList.add('ad-none');
+    };
+    const ins = document.createElement('ins');
+    ins.className = 'kakao_ad_area'; ins.style.display = 'none';
+    ins.setAttribute('data-ad-unit', u.id);
+    ins.setAttribute('data-ad-width', String(u.w));
+    ins.setAttribute('data-ad-height', String(u.h));
+    ins.setAttribute('data-ad-onfail', fail);
+    if (preload) ins.setAttribute('data-ad-preload', 'Y');
+    box.appendChild(ins);
+    this.need = true;
+  },
+  show(box, key){
+    if (this.off || !box || box.dataset.ad) return;
+    this.put(box, key, true);
+    this.load();
+    try {
+      const ins = box.querySelector('ins');
+      if (ins && window.adfit && typeof window.adfit.render === 'function') window.adfit.render(ins);
+    } catch (e) { /* 무시 */ }
+  },
+  load(){
+    if (!this.need || this.loaded) return;
+    this.loaded = true;
+    const s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.src = 'https://t1.kakaocdn.net/kas/static/ba.min.js';
+    document.body.appendChild(s);
+  },
+  sync(busy){
+    if (this.off || this.pc || !this.overlay) return;
+    const show = !this.closed && !busy && window.scrollY > 320;
+    $('anchor').classList.toggle('on', show);
+    document.body.classList.toggle('anch', show);
+    if (show) this.show($('ad-anchor'), 'anchor');
+  },
+  done(title, msg, steps, img){
+    if (this.off || !this.popup) return;
+    $('doneTitle').textContent = title;
+    $('doneMsg').textContent = msg;
+    $('doneSteps').innerHTML = steps.map(t => '<li>' + t + '</li>').join('');
+    $('doneImg').classList.toggle('hide', !img);
+    $('doneImgNote').classList.toggle('hide', !img);
+    if (img) $('doneImg').src = img;
+    $('doneCard').classList.remove('hide');
+    this.show($('ad-done'), 'done');
+    if (img) setTimeout(() => {
+      if (this.pc) { const side = $('side'), card = $('doneCard'); side.scrollTo({top: Math.max(0, card.offsetTop - 12), behavior: 'smooth'}); }
+      else $('doneCard').scrollIntoView({behavior: 'smooth', block: 'start'});
+      updateAnchor();
+    }, 250);
+    else updateAnchor();
+  },
+  hideDone(){ if (!$('doneCard').classList.contains('hide')) { $('doneCard').classList.add('hide'); updateAnchor(); } }
+};
+
+/* 하단 오버형을 띄워도 되는가 — 문항 화면이 보이면 안 된다 */
+function updateAnchor(){
+  const busy = (!$('qBox').classList.contains('hide') && onScreen($('quizCard'), 40)) || onScreen($('doneCard'), 30);
+  AD.sync(busy);
+}
+
+/* ── 시작 ── */
+function start(){
+  S.i = 0; S.ans = [];
+  showQ();
+  const q = $('quizCard');
+  if (q.getBoundingClientRect().top < 0 || q.getBoundingClientRect().top > window.innerHeight * .5) q.scrollIntoView({behavior: 'smooth', block: 'start'});
+  updateAnchor();
+}
+function init(){
+  renderTypes();
+  $('btnStart').addEventListener('click', start);
+  $('opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (b) pick(+b.dataset.k); });
+  $('btnBack').addEventListener('click', () => { if (S.i > 0) { S.i--; showQ(); } });
+  $('btnSave').addEventListener('click', saveCard);
+  $('btnCopy').addEventListener('click', copyLink);
+  $('btnRetry').addEventListener('click', () => { history.replaceState(null, '', location.pathname); start(); });
+  $('typeGrid').addEventListener('click', e => { const a = e.target.closest('.type'); if (!a) return; e.preventDefault(); peek(a.dataset.t); });
+  ['rGood', 'rBad'].forEach(id => $(id).addEventListener('click', e => { e.preventDefault(); peek($(id).dataset.t); }));
+  $('doneHide').addEventListener('click', () => AD.hideDone());
+  $('anchorX').addEventListener('click', () => { AD.closed = true; AD.sync(true); });
+  $('iaGo').addEventListener('click', goOut);
+  $('iaX').addEventListener('click', () => {
+    document.body.classList.remove('inapp');
+    try { sessionStorage.setItem('ai_use_test.iahide', '1'); } catch (e) { /* 무시 */ }
+  });
+  let st = 0;
+  window.addEventListener('scroll', () => { clearTimeout(st); st = setTimeout(updateAnchor, 80); }, {passive: true});
+  window.addEventListener('resize', () => { clearTimeout(st); st = setTimeout(updateAnchor, 120); });
+  initInApp();
+  AD.init();
+  /* 공유받은 결과 · 지난 결과 */
+  const r = new URLSearchParams(location.search).get('r');
+  let last = null;
+  try { last = JSON.parse(localStorage.getItem(LS_KEY) || 'null'); } catch (e) { /* 무시 */ }
+  if (r && TYPES[r]) {
+    const mine = last && last.t === r;
+    showResult(r, mine ? last.sc : null, !mine, false);
+  } else if (last && TYPES[last.t]) {
+    showResult(last.t, last.sc, false, false);
+    $('resState').textContent = '지난 결과';
+    $('btnStart').textContent = '다시 하기';
+  }
+}
+init();
+</script>
+</body>
+</html>
